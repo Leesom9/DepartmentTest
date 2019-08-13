@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{../../static/css/login.css}"/>
+
+
+    <link rel="shortcut icon" href="../../static/image/logo.ico" type="image/x-icon" />
+    <!--制作的图标，使用href关联，仅仅需要更改href的内容  -->
+</head>
+<body>
+    <form action="${pageContext.request.contextPath}/dept/login" method="post">
+        <table id="login">
+            <tr>
+                <td>
+                    <label>账号</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>密码</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="" >点击注册</a>
+                </td>
+                <td>
+                    <input type="submit" value="登录">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
