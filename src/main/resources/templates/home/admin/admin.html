@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+    <!--制作的图标，使用href关联，仅仅需要更改href的内容  -->
+    <link rel="shortcut icon" href="../../static/image/logo.ico" type="image/x-icon" />
+    <script src="../../../static/js/adminMain.js"></script>
+    <script src="../../../static/jQuery/jquery.js"></script>
+</head>
+<body>
+    <form action="/admin/findAllUser" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label>编号</label>
+                </td>
+                <td>
+                    <input type="text" name="id"/>
+                </td>
+                <td>
+                    <input type="submit" value="编号查询" id="SelectByIdButton">
+                </td>
+                <td>
+                    <input type="submit" value="全部查询" id="SelectAllButton">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label>账号</label>
+                </td>
+                <td>
+                    <input type="text" id="usernameID" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>密码</label>
+                </td>
+                <td>
+                    <input type="text" id="passwordID" name="password">
+                </td>
+                <td>
+                    <button id="addUserButtonID" value="添加" onclick="addUser()"></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <table id="deptTable" border="1">
+            <tr>
+                <td>编号</td>
+                <td>账户</td>
+                <td>密码</td>
+                <td colspan="2">操作</td>
+            </tr>
+            <tr th:each="u:${userList}">
+                <td th:text = "${u.id}">
+                <td th:text = "${u.username}"/>
+                <td th:text = "${u.password}"/>
+                <td>
+                    <a href="">修改</a>
+                </td>
+                <td>
+                    <a href="/admin/delUser?id=${u.id}" methods="POST">删除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
