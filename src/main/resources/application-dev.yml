@@ -7,7 +7,7 @@ spring:
       #监控统计拦截的filters
       filter: stat
       #mysql驱动
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       #基本属性
       url: jdbc:mysql://localhost:3306/department?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
       username: root

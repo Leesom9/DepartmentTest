@@ -5,4 +5,17 @@
 
 #login td{
     height: 30px;
+    width: 80px;
+}
+
+#registerURL{
+    font-size: 12px;
+}
+
+#loginButton input{
+    font-size: 15px;
+    background-color: #69b373;
+    font-family: 微软雅黑;
+    outline-style: none;
+    padding: 0px 10px;
 }
